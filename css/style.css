@@ -304,3 +304,94 @@ ul { list-style: none; }
 .nav-links.open a { font-size: 18px; padding: 14px 16px; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============ NAV LOGO OVERRIDES ============ */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.nav-logo .mark {
+  height: 52px;
+  width: auto;
+  flex-shrink: 0;
+}
+.nav-logo .wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.nav-logo .wordmark-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--teal-deep);
+  letter-spacing: -0.3px;
+}
+.nav-logo .wordmark-tag {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+/* footer logo */
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.footer-logo-wrap .mark {
+  height: 52px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+.footer-logo-wrap .wordmark-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+.footer-logo-wrap .wordmark-tag {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* Hero illustration */
+.hero-illustration {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+}
+
+/* Client logos — styled text badges */
+.client-logo {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--earth-mid);
+  opacity: 1 !important;
+  filter: none !important;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.client-logo:hover {
+  border-color: var(--teal-mid);
+  color: var(--teal-deep);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
