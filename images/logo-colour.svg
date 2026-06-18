@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 130" role="img">
+  <title>SkillTrain Logo — Colour</title>
+  <desc>SkillTrain full logo in brand colours with transparent background</desc>
+  <g transform="translate(0, 0)">
+    <circle cx="65" cy="65" r="62" fill="none" stroke="#1A6B6B" stroke-width="1.5"/>
+    <circle cx="65" cy="65" r="56" fill="none" stroke="#1A6B6B" stroke-width="3"/>
+    <circle cx="65" cy="65" r="47" fill="#1A6B6B"/>
+    <circle cx="65" cy="65" r="8" fill="#E8872A"/>
+    <circle cx="65" cy="30" r="6.5" fill="white"/>
+    <path d="M56 43 Q56 35 65 33 Q74 35 74 43" fill="white"/>
+    <g transform="translate(44, 84)">
+      <g transform="rotate(0)">  <rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <g transform="rotate(45)"> <rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <g transform="rotate(90)"> <rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <g transform="rotate(135)"><rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <g transform="rotate(180)"><rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <g transform="rotate(225)"><rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <g transform="rotate(270)"><rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <g transform="rotate(315)"><rect x="-2" y="-11" width="4" height="4" rx="1" fill="white"/></g>
+      <circle cx="0" cy="0" r="7.5" fill="white"/>
+      <circle cx="0" cy="0" r="3.2" fill="#1A6B6B"/>
+    </g>
+    <g transform="translate(76, 73)">
+      <rect x="0"  y="11" width="5" height="9"  rx="1.2" fill="white" opacity="0.5"/>
+      <rect x="7"  y="6"  width="5" height="14" rx="1.2" fill="white" opacity="0.75"/>
+      <rect x="14" y="0"  width="5" height="20" rx="1.2" fill="white"/>
+    </g>
+    <text x="148" y="56" font-family="Georgia,serif" font-size="38" font-weight="700" fill="#1A6B6B" letter-spacing="-0.5">SkillTrain</text>
+    <text x="149" y="80" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#E8872A" letter-spacing="1.8">PURPOSE · PEOPLE · PROCESS · PERFORMANCE</text>
+  </g>
+</svg>
