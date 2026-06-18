@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services — SkillTrain</title>
+  <meta name="description" content="Explore SkillTrain's six flagship services: PipelineForge, LeaderShift, CoachForward, ManagerEdge, VisionCraft, and SparkTalk." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231A6B6B'/><circle cx='13' cy='12' r='5' fill='none' stroke='white' stroke-width='2.5'/><rect x='8' y='22' width='10' height='2.5' rx='1.25' fill='%23E8872A'/><rect x='8' y='18' width='16' height='2.5' rx='1.25' fill='rgba(255,255,255,0.7)'/></svg>" />
+  <style>
+    .service-detail {
+      padding: 80px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-detail:nth-child(even) { background: var(--off-white); }
+    .service-detail-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .service-detail-inner.reverse { direction: rtl; }
+    .service-detail-inner.reverse > * { direction: ltr; }
+    .service-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+    .service-big-icon {
+      width: 80px; height: 80px;
+      background: var(--teal-light);
+      border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+    .service-brand-name {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--earth-dark);
+      margin-bottom: 8px;
+    }
+    .service-category {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 20px;
+    }
+    .service-tagline {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .service-for {
+      background: var(--teal-light);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .service-for-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      margin-bottom: 8px;
+    }
+    .service-for-text {
+      font-size: 14px;
+      color: var(--earth-dark);
+      line-height: 1.6;
+    }
+    .service-content h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--earth-dark);
+      margin: 32px 0 14px;
+    }
+    .service-content h3:first-child { margin-top: 0; }
+    .service-content p {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .service-feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .service-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .service-feature-item::before {
+      content: '✓';
+      color: var(--teal-deep);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .service-cta-block {
+      background: linear-gradient(135deg, var(--teal-deep), #0D4A4A);
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 32px;
+      color: white;
+    }
+    .service-cta-block p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 16px;
+    }
+    @media (max-width: 768px) {
+      .service-detail-inner { grid-template-columns: 1fr; gap: 32px; }
+      .service-detail-inner.reverse { direction: ltr; }
+      .service-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <div class="logo-mark"></div>
+      <div class="logo-text">
+        <span class="logo-name">SkillTrain</span>
+        <span class="logo-tagline">Develop People. Elevate Organizations.</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="team.html">Team</a>
+      <a href="clients.html">Clients</a>
+      <a href="impact.html">Social Impact</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-eyebrow" style="color:var(--amber); text-align:center; margin-bottom:12px;">Our Services</p>
+    <h1 class="page-hero-title">Six Ways We Grow Your People</h1>
+    <p class="page-hero-sub">Every service we offer is branded, proven, and built around your unique organizational context — never off-the-shelf.</p>
+  </div>
+</div>
+
+<!-- SERVICE 1: PipelineForge -->
+<div class="service-detail" id="pipeline">
+  <div class="service-detail-inner">
+    <div class="service-sidebar reveal">
+      <div class="service-big-icon">🌱</div>
+      <p class="service-category">Talent Architecture</p>
+      <h2 class="service-brand-name">PipelineForge™</h2>
+      <p class="service-tagline">Customized talent incubation programmes that guarantee a continuous, high-quality talent pipeline for your organization — designed, operated, and sustained by SkillTrain.</p>
+      <div class="service-for">
+        <p class="service-for-label">Ideal For</p>
+        <p class="service-for-text">HR & Talent Leaders, CXOs, and organizations looking to build sustainable entry-level to mid-level talent pipelines.</p>
+      </div>
+      <a href="contact.html" class="btn-teal">Enquire About This Service &#8594;</a>
+    </div>
+
+    <div class="service-content reveal">
+      <h3>What is PipelineForge™?</h3>
+      <p>PipelineForge™ is SkillTrain's end-to-end talent incubation service. We partner with your organization to design a programme that identifies, attracts, trains, and transitions talent directly into your business — filling critical skill gaps before they become crises.</p>
+      <p>One of our flagship examples is the <strong>Thoughtworks STEP Programme</strong> — an 18-month paid internship initiative for diploma holders that we have been advising since 2012. This programme has become a model for how thoughtful talent incubation can create transformational outcomes for both participants and organizations.</p>
+
+      <h3>What We Offer</h3>
+      <div class="service-feature-list">
+        <div class="service-feature-item">Custom talent incubation programme design from the ground up</div>
+        <div class="service-feature-item">Full programme operations — from cohort selection to graduation</div>
+        <div class="service-feature-item">Apprenticeship programmes compliant with India's regulatory framework</div>
+        <div class="service-feature-item">Blended learning models combining classroom, online, and on-the-job training</div>
+        <div class="service-feature-item">Continuous cohort assessments and progress tracking</div>
+        <div class="service-feature-item">Employer branding and talent attraction support</div>
+      </div>
+
+      <h3>Delivery Formats</h3>
+      <p>Online · Offline · Hybrid · Long-form (6–24 months) · Short cohort sprints (6–12 weeks)</p>
+
+      <div class="service-cta-block">
+        <p>Interested in building a talent pipeline for your organization? Let's design something that truly fits.</p>
+        <a href="contact.html" class="btn-primary">Start a Conversation &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 2: LeaderShift -->
+<div class="service-detail" id="leadership">
+  <div class="service-detail-inner reverse">
+    <div class="service-sidebar reveal">
+      <div class="service-big-icon">🧭</div>
+      <p class="service-category">Leadership Development</p>
+      <h2 class="service-brand-name">LeaderShift™</h2>
+      <p class="service-tagline">High-impact leadership development programmes for senior management teams — from startups to large multinationals — grounded in proven frameworks and real-world application.</p>
+      <div class="service-for">
+        <p class="service-for-label">Ideal For</p>
+        <p class="service-for-text">Senior leaders, CXOs, founders, and executive teams across startups, SMEs, and large organizations globally.</p>
+      </div>
+      <a href="contact.html" class="btn-teal">Enquire About This Service &#8594;</a>
+    </div>
+
+    <div class="service-content reveal">
+      <h3>What is LeaderShift™?</h3>
+      <p>LeaderShift™ is SkillTrain's flagship leadership development suite. We work with senior leadership teams to create breakthroughs in how they lead — individually and collectively. Our programmes are designed to be provocative, practical, and transformational.</p>
+      <p>Our most powerful flagship offering within LeaderShift™ is the <strong>Grid Leadership Seminar</strong> — based on Blake & Mouton's scientifically validated Grid theory. This intensive programme helps leaders identify their dominant leadership style and make a conscious choice to adopt the most effective leadership approach.</p>
+
+      <h3>Speciality Areas</h3>
+      <div class="service-feature-list">
+        <div class="service-feature-item">Decision Making — frameworks for better, faster, bolder decisions</div>
+        <div class="service-feature-item">Creativity & Innovation — unlocking new thinking at the leadership level</div>
+        <div class="service-feature-item">Communication Excellence — how great leaders speak, listen, and inspire</div>
+        <div class="service-feature-item">Problem Solving & Structured Thinking</div>
+        <div class="service-feature-item">Appreciative Inquiry — leading from strength rather than deficit</div>
+        <div class="service-feature-item">Strengths-Based Leadership Development</div>
+        <div class="service-feature-item">Change Management — leading organizations through transformation</div>
+        <div class="service-feature-item">Grid Leadership Seminar (Blake & Mouton) — our flagship</div>
+      </div>
+
+      <h3>Delivery Formats</h3>
+      <p>Online · Offline · Hybrid · Half-day workshops · Multi-day intensives · Ongoing cohort programmes</p>
+
+      <div class="service-cta-block">
+        <p>Ready to take your leadership team to the next level? Let's design a LeaderShift™ experience for you.</p>
+        <a href="contact.html" class="btn-primary">Start a Conversation &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 3: CoachForward -->
+<div class="service-detail" id="coaching">
+  <div class="service-detail-inner">
+    <div class="service-sidebar reveal">
+      <div class="service-big-icon">🎯</div>
+      <p class="service-category">Executive Coaching</p>
+      <h2 class="service-brand-name">CoachForward™</h2>
+      <p class="service-tagline">Certified Marshall Goldsmith Stakeholder Centred Coaching — the world's most proven leadership coaching method — for individuals and groups seeking deep, lasting behavioural transformation.</p>
+      <div class="service-for">
+        <p class="service-for-label">Ideal For</p>
+        <p class="service-for-text">CXOs, senior leaders, high-potential managers, and groups seeking measurable behavioural growth.</p>
+      </div>
+      <a href="contact.html" class="btn-teal">Enquire About This Service &#8594;</a>
+    </div>
+
+    <div class="service-content reveal">
+      <h3>What is CoachForward™?</h3>
+      <p>CoachForward™ delivers executive coaching that actually produces measurable change. We follow the <strong>Marshall Goldsmith Stakeholder Centred Coaching</strong> process — a rigorous, feedback-based method proven to create sustained behavioural improvement in leaders.</p>
+      <p>Unlike traditional coaching that relies solely on the coach-client relationship, Stakeholder Centred Coaching actively involves the leader's colleagues, managers, and direct reports — ensuring that growth is real, visible, and sustained in the workplace.</p>
+
+      <h3>What We Offer</h3>
+      <div class="service-feature-list">
+        <div class="service-feature-item">Individual executive coaching engagements (3, 6, and 12-month programmes)</div>
+        <div class="service-feature-item">Group coaching for leadership teams and cohorts</div>
+        <div class="service-feature-item">360-degree stakeholder feedback and structured follow-through</div>
+        <div class="service-feature-item">Behavioural skills focus: EQ, communication, influence, resilience</div>
+        <div class="service-feature-item">Building coaching cultures within organizations</div>
+        <div class="service-feature-item">Team effectiveness coaching for intact leadership teams</div>
+      </div>
+
+      <h3>Our Coaching Philosophy</h3>
+      <p>We believe that the greatest leaders are not those who have all the answers, but those who are most committed to growth. CoachForward™ creates a safe, challenging space for leaders to see themselves clearly — and choose to be better.</p>
+
+      <div class="service-cta-block">
+        <p>Interested in coaching for yourself or your leadership team? Let's start with a discovery conversation.</p>
+        <a href="contact.html" class="btn-primary">Book a Discovery Call &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 4: ManagerEdge -->
+<div class="service-detail" id="manager">
+  <div class="service-detail-inner reverse">
+    <div class="service-sidebar reveal">
+      <div class="service-big-icon">⚡</div>
+      <p class="service-category">Managerial Excellence</p>
+      <h2 class="service-brand-name">ManagerEdge™</h2>
+      <p class="service-tagline">A powerful, comprehensive suite of people skills programmes for mid-level managers — building the practical capabilities that drive team performance, engagement, and organizational results.</p>
+      <div class="service-for">
+        <p class="service-for-label">Ideal For</p>
+        <p class="service-for-text">Mid-level managers, team leads, and first-time people managers across all industries and organization sizes.</p>
+      </div>
+      <a href="contact.html" class="btn-teal">Enquire About This Service &#8594;</a>
+    </div>
+
+    <div class="service-content reveal">
+      <h3>What is ManagerEdge™?</h3>
+      <p>ManagerEdge™ addresses one of the most persistent challenges in organizations: the gap between technical capability and people management effectiveness. Many high performers are promoted into management without the skills to lead people well. ManagerEdge™ changes that.</p>
+      <p>This is a modular suite of programmes — available both as standardized offerings and fully customized to your organizational context — that can be taken as standalone modules or combined into a comprehensive management development journey.</p>
+
+      <h3>Programme Modules</h3>
+      <div class="service-feature-list">
+        <div class="service-feature-item">People Management Fundamentals — leading with intention</div>
+        <div class="service-feature-item">Communication Excellence for Managers</div>
+        <div class="service-feature-item">Execution Excellence — getting things done through others</div>
+        <div class="service-feature-item">Creative & Design Thinking for Managers</div>
+        <div class="service-feature-item">Structured Thinking & Data Synthesis</div>
+        <div class="service-feature-item">Decision Making under Uncertainty</div>
+        <div class="service-feature-item">Being a Visionary — leading beyond today</div>
+        <div class="service-feature-item">Emotional Intelligence for the Workplace</div>
+        <div class="service-feature-item">Resilience — leading through pressure and setbacks</div>
+        <div class="service-feature-item">Running Effective Meetings</div>
+      </div>
+
+      <div class="service-cta-block">
+        <p>Want to build a generation of confident, capable managers? Let's design your ManagerEdge™ journey.</p>
+        <a href="contact.html" class="btn-primary">Start a Conversation &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 5: VisionCraft -->
+<div class="service-detail" id="strategy">
+  <div class="service-detail-inner">
+    <div class="service-sidebar reveal">
+      <div class="service-big-icon">🗺️</div>
+      <p class="service-category">Strategy Facilitation</p>
+      <h2 class="service-brand-name">VisionCraft™</h2>
+      <p class="service-tagline">Expert facilitation for organizational strategy and planning — from crystallising your vision to building actionable people and business roadmaps that stick.</p>
+      <div class="service-for">
+        <p class="service-for-label">Ideal For</p>
+        <p class="service-for-text">Leadership teams, boards, and founders planning strategy retreats, annual offsites, and organizational transformation journeys.</p>
+      </div>
+      <a href="contact.html" class="btn-teal">Enquire About This Service &#8594;</a>
+    </div>
+
+    <div class="service-content reveal">
+      <h3>What is VisionCraft™?</h3>
+      <p>Great strategy rarely fails because of a lack of ideas. It fails because of poor facilitation — meetings without structure, conversations without clarity, and ambitions without actionable plans. VisionCraft™ brings world-class facilitation to your most important strategic conversations.</p>
+      <p>We are experienced, neutral facilitators who create the conditions for your leadership team to think clearly, debate productively, align deeply, and commit fully — so that what gets decided in the room actually happens outside it.</p>
+
+      <h3>What We Facilitate</h3>
+      <div class="service-feature-list">
+        <div class="service-feature-item">Vision identification and articulation workshops</div>
+        <div class="service-feature-item">Translating vision into strategy and actionable plans</div>
+        <div class="service-feature-item">Organizational strategy sessions (annual planning, pivots, transformation)</div>
+        <div class="service-feature-item">People strategy — talent, culture, and leadership pipeline planning</div>
+        <div class="service-feature-item">Leadership team alignment sessions</div>
+        <div class="service-feature-item">Change management planning and facilitation</div>
+      </div>
+
+      <h3>Our Facilitation Approach</h3>
+      <p>We bring structured facilitation tools, deep organizational insight, and a warm, challenging presence — ensuring every voice is heard, every idea is tested, and every decision is grounded in genuine alignment.</p>
+
+      <div class="service-cta-block">
+        <p>Planning a strategy retreat or offsite? Let VisionCraft™ turn your ambition into a plan that works.</p>
+        <a href="contact.html" class="btn-primary">Start a Conversation &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 6: SparkTalk -->
+<div class="service-detail" id="keynote">
+  <div class="service-detail-inner reverse">
+    <div class="service-sidebar reveal">
+      <div class="service-big-icon">🎤</div>
+      <p class="service-category">Keynotes & Webinars</p>
+      <h2 class="service-brand-name">SparkTalk™</h2>
+      <p class="service-tagline">Engaging, insight-rich keynotes and power webinars on any leadership or people development topic — from 15 minutes to an hour — that leave audiences energised and thinking differently.</p>
+      <div class="service-for">
+        <p class="service-for-label">Ideal For</p>
+        <p class="service-for-text">All-hands meetings, conferences, leadership summits, team days, and virtual events for organizations of any size.</p>
+      </div>
+      <a href="contact.html" class="btn-teal">Book a SparkTalk™ &#8594;</a>
+    </div>
+
+    <div class="service-content reveal">
+      <h3>What is SparkTalk™?</h3>
+      <p>Sometimes, an organization needs a spark — a moment of insight that shifts perspective, opens minds, and gets people talking. SparkTalk™ delivers exactly that: a compelling, expertly crafted keynote or webinar on a topic of your choosing, delivered with energy, authority, and warmth.</p>
+      <p>From a 15-minute energizer at an all-hands meeting to a 60-minute keynote at your annual leadership summit, Ganesh Balasubramanian brings a rare combination of intellectual depth, storytelling, and practical wisdom that makes every SparkTalk™ memorable.</p>
+
+      <h3>Popular SparkTalk™ Topics</h3>
+      <div class="service-feature-list">
+        <div class="service-feature-item">The Future of Leadership — what it means to lead in a complex world</div>
+        <div class="service-feature-item">Emotional Intelligence — the leadership edge no one can replicate</div>
+        <div class="service-feature-item">Decision Making under Uncertainty</div>
+        <div class="service-feature-item">Building a Coaching Culture in Your Organization</div>
+        <div class="service-feature-item">Creativity as a Leadership Skill</div>
+        <div class="service-feature-item">The Power of Appreciative Leadership</div>
+        <div class="service-feature-item">Strengths-Based Thinking for High Performance</div>
+        <div class="service-feature-item">Any topic of your choosing — we tailor every talk to your audience</div>
+      </div>
+
+      <h3>Formats</h3>
+      <p>15 minutes · 30 minutes · 45 minutes · 60 minutes · In-person · Virtual · Hybrid panel discussions</p>
+
+      <div class="service-cta-block">
+        <p>Want to inspire your team or conference audience? Let's talk about what would resonate most.</p>
+        <a href="contact.html" class="btn-primary">Book a SparkTalk™ &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="section" style="background:var(--amber-light); border-top:1px solid var(--border);">
+  <div class="section-inner text-center reveal">
+    <p class="section-eyebrow">Not Sure Where to Start?</p>
+    <h2 class="section-title">Let's <em>Figure It Out</em> Together</h2>
+    <p class="section-subtitle">Every organization is different. Tell us about your challenges and goals, and we'll suggest the right combination of services to help you get there.</p>
+    <div style="margin-top:40px;">
+      <a href="contact.html" class="btn-primary">Start a Conversation &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-mark"></div>
+          <div class="logo-text">
+            <span class="logo-name">SkillTrain</span>
+            <span class="logo-tagline">Develop People. Elevate Organizations.</span>
+          </div>
+        </div>
+        <p class="footer-desc">A global leadership development, executive coaching, and people development organization. Headquartered in India. Serving organizations worldwide.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="#pipeline">PipelineForge™</a></li>
+          <li><a href="#leadership">LeaderShift™</a></li>
+          <li><a href="#coaching">CoachForward™</a></li>
+          <li><a href="#manager">ManagerEdge™</a></li>
+          <li><a href="#strategy">VisionCraft™</a></li>
+          <li><a href="#keynote">SparkTalk™</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="impact.html">Social Impact</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links">
+          <li><a href="mailto:ganesh@skilltrain.in">ganesh@skilltrain.in</a></li>
+          <li><a href="https://www.linkedin.com/in/bganesh/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/skilltrainindia" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 SkillTrain Training & Consultancy India Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/bganesh/" target="_blank" class="social-icon">in</a>
+        <a href="https://www.youtube.com/skilltrainindia" target="_blank" class="social-icon">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
