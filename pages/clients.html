@@ -6,51 +6,15 @@
   <title>Our Clients — SkillTrain</title>
   <meta name="description" content="SkillTrain's clients include Thoughtworks, Larsen & Toubro, Dr. Reddy's Laboratories, Clari, Trinity Life Sciences, and more." />
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231A6B6B'/><circle cx='13' cy='12' r='5' fill='none' stroke='white' stroke-width='2.5'/><rect x='8' y='22' width='10' height='2.5' rx='1.25' fill='%23E8872A'/><rect x='8' y='18' width='16' height='2.5' rx='1.25' fill='rgba(255,255,255,0.7)'/></svg>" />
+  <link rel="icon" type="image/svg+xml" href="../images/logo-mark-colour.svg" />
   <style>
-    .client-showcase {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 56px;
-    }
-    .client-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px 24px;
-      text-align: center;
-      transition: all 0.3s;
-    }
+    .client-showcase { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 56px; }
+    .client-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 32px 24px; text-align: center; transition: all 0.3s; }
     .client-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); border-color: var(--teal-light); }
-    .client-logo-box {
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
-    .client-name-big {
-      font-family: var(--font-accent);
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--earth-dark);
-      margin-bottom: 6px;
-    }
-    .client-sector {
-      font-size: 12px;
-      color: var(--teal-mid);
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .client-services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      justify-content: center;
-    }
+    .client-logo-box { height: 64px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .client-name-big { font-family: var(--font-accent); font-size: 17px; font-weight: 700; color: var(--earth-dark); margin-bottom: 6px; }
+    .client-sector { font-size: 12px; color: var(--teal-mid); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 12px; }
+    .client-services { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
     @media (max-width: 1024px) { .client-showcase { grid-template-columns: repeat(3,1fr); } }
     @media (max-width: 768px) { .client-showcase { grid-template-columns: repeat(2,1fr); } }
     @media (max-width: 480px) { .client-showcase { grid-template-columns: 1fr; } }
@@ -62,10 +26,10 @@
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo">
       <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
-      <div class="wordmark">
-        <span class="wordmark-name">SkillTrain</div>
-        <span class="wordmark-tag">Purpose · People · Process · Performance</div>
-      </div>
+      <span class="wordmark">
+        <span class="wordmark-name">SkillTrain</span>
+        <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+      </span>
     </a>
     <div class="nav-links">
       <a href="../index.html">Home</a>
@@ -77,7 +41,7 @@
       <a href="insights.html">Insights</a>
       <a href="contact.html" class="nav-cta">Get in Touch</a>
     </div>
-    <div class="nav-hamburger"><span></div><span></div><span></div></div>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
@@ -96,117 +60,67 @@
       <h2 class="section-title">Organizations We've <em>Had the Honour</em> of Serving</h2>
       <p class="section-subtitle">Every client relationship is built on trust, results, and a genuine commitment to people development.</p>
     </div>
-
     <div class="client-showcase">
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">🔵</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">🔵</span></div>
         <div class="client-name-big">Thoughtworks</div>
         <div class="client-sector">Technology · Global</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">Our longest and most celebrated partnership — advising the STEP Programme (talent incubation for diploma holders) since 2012, alongside leadership coaching and facilitation.</p>
-        <div class="client-services">
-          <span class="tag">PipelineForge™</div>
-          <span class="tag">CoachForward™</div>
-          <span class="tag">LeaderShift™</div>
-        </div>
+        <div class="client-services"><span class="tag">PipelineForge™</span><span class="tag">CoachForward™</span><span class="tag">LeaderShift™</span></div>
       </div>
-
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">🏗️</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">🏗️</span></div>
         <div class="client-name-big">Larsen &amp; Toubro</div>
         <div class="client-sector">Engineering & Infrastructure · India</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">Leadership development and behavioural coaching engagements for L&T's senior leadership teams, including Grid Leadership Seminars and executive coaching support.</p>
-        <div class="client-services">
-          <span class="tag">LeaderShift™</div>
-          <span class="tag">CoachForward™</div>
-        </div>
+        <div class="client-services"><span class="tag">LeaderShift™</span><span class="tag">CoachForward™</span></div>
       </div>
-
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">💊</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">💊</span></div>
         <div class="client-name-big">Dr. Reddy's Laboratories</div>
         <div class="client-sector">Pharmaceuticals · Global</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">People development interventions for one of India's foremost pharmaceutical companies — focused on managerial effectiveness and leadership pipeline building.</p>
-        <div class="client-services">
-          <span class="tag">ManagerEdge™</div>
-          <span class="tag">LeaderShift™</div>
-        </div>
+        <div class="client-services"><span class="tag">ManagerEdge™</span><span class="tag">LeaderShift™</span></div>
       </div>
-
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">💻</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">💻</span></div>
         <div class="client-name-big">Sedin Technologies</div>
         <div class="client-sector">Technology · India</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">Customized leadership and people development programmes for the technology leadership team, focused on growth-stage scaling challenges.</p>
-        <div class="client-services">
-          <span class="tag">LeaderShift™</div>
-          <span class="tag">ManagerEdge™</div>
-        </div>
+        <div class="client-services"><span class="tag">LeaderShift™</span><span class="tag">ManagerEdge™</span></div>
       </div>
-
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">📊</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">📊</span></div>
         <div class="client-name-big">Clari</div>
         <div class="client-sector">Revenue Intelligence · Global</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">Leadership coaching and development engagements for Clari's high-performance leadership team, helping scale culture and leadership capability alongside rapid growth.</p>
-        <div class="client-services">
-          <span class="tag">CoachForward™</div>
-          <span class="tag">LeaderShift™</div>
-        </div>
+        <div class="client-services"><span class="tag">CoachForward™</span><span class="tag">LeaderShift™</span></div>
       </div>
-
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">🧬</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">🧬</span></div>
         <div class="client-name-big">Trinity Life Sciences</div>
         <div class="client-sector">Life Sciences Consulting · Global</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">People development and leadership effectiveness interventions for Trinity's global team of life sciences consultants and leaders.</p>
-        <div class="client-services">
-          <span class="tag">LeaderShift™</div>
-          <span class="tag">CoachForward™</div>
-        </div>
+        <div class="client-services"><span class="tag">LeaderShift™</span><span class="tag">CoachForward™</span></div>
       </div>
-
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">🎓</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">🎓</span></div>
         <div class="client-name-big">Electives</div>
         <div class="client-sector">Enterprise Learning · Global</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">Ganesh serves as a certified Instructor with Electives — a global enterprise learning platform — delivering leadership and professional development content to organizations worldwide.</p>
-        <div class="client-services">
-          <span class="tag">SparkTalk™</div>
-          <span class="tag">LeaderShift™</div>
-        </div>
+        <div class="client-services"><span class="tag">SparkTalk™</span><span class="tag">LeaderShift™</span></div>
       </div>
-
       <div class="client-card reveal">
-        <div class="client-logo-box">
-          <span style="font-size:32px;">🌱</div>
-        </div>
+        <div class="client-logo-box"><span style="font-size:32px;">🌱</span></div>
         <div class="client-name-big">Yuva Parivartan</div>
         <div class="client-sector">Non-Profit · India</div>
         <p style="font-size:13px; color:var(--text-mid); line-height:1.6; margin-bottom:14px;">Social impact engagement with this non-profit organization — a reflection of SkillTrain's commitment to people development across all sectors, including the development sector.</p>
-        <div class="client-services">
-          <span class="tag">Leadership Dev</div>
-          <span class="tag">Facilitation</div>
-        </div>
+        <div class="client-services"><span class="tag">Leadership Dev</span><span class="tag">Facilitation</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
 <section class="section testimonials">
   <div class="section-inner">
     <div class="text-center reveal">
@@ -216,33 +130,15 @@
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
         <p class="testimonial-text">The STEP Programme has been one of the most successful talent initiatives we've run. Ganesh's guidance, energy, and genuine care for participants has been instrumental to its success over so many years.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">T</div>
-          <div>
-            <div class="testimonial-name">Programme Lead</div>
-            <div class="testimonial-role">Thoughtworks, India</div>
-          </div>
-        </div>
+        <div class="testimonial-author"><div class="testimonial-avatar">T</div><div><div class="testimonial-name">Programme Lead</div><div class="testimonial-role">Thoughtworks, India</div></div></div>
       </div>
       <div class="testimonial-card reveal">
         <p class="testimonial-text">What sets SkillTrain apart is the depth of customisation. Ganesh took the time to truly understand our culture before designing anything. The result was a programme that felt made for us — because it was.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">H</div>
-          <div>
-            <div class="testimonial-name">Head of HR</div>
-            <div class="testimonial-role">Large Enterprise, India</div>
-          </div>
-        </div>
+        <div class="testimonial-author"><div class="testimonial-avatar">H</div><div><div class="testimonial-name">Head of HR</div><div class="testimonial-role">Large Enterprise, India</div></div></div>
       </div>
       <div class="testimonial-card reveal">
         <p class="testimonial-text">The Grid Leadership Seminar was a pivotal moment for our senior team. It created a shared language for leadership and helped us have conversations we'd been avoiding for years. Transformational, truly.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div>
-            <div class="testimonial-name">Managing Director</div>
-            <div class="testimonial-role">Technology Company</div>
-          </div>
-        </div>
+        <div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">Managing Director</div><div class="testimonial-role">Technology Company</div></div></div>
       </div>
     </div>
   </div>
@@ -262,14 +158,15 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-grid">
-      <div><div class="footer-logo-wrap">
-        <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
-        <div class="wordmark">
-          <div class="wordmark-name">SkillTrain</div>
-          <div class="wordmark-tag">Purpose · People · Process · Performance</div>
+      <div>
+        <div class="footer-logo-wrap">
+          <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
+          <span class="wordmark">
+            <span class="wordmark-name">SkillTrain</span>
+            <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+          </span>
         </div>
-      </div>
-      <p class="footer-desc">A global leadership development, executive coaching, and people development organization. Headquartered in India. Serving organizations worldwide.</p>
+        <p class="footer-desc">A global leadership development, executive coaching, and people development organization. Headquartered in India. Serving organizations worldwide.</p>
       </div>
       <div>
         <p class="footer-col-title">Services</p>
@@ -303,7 +200,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 SkillTrain Training & Consultancy India Pvt. Ltd. All rights reserved.</p>
+      <p class="footer-copy">© 2025 SkillTrain Training &amp; Consultancy India Pvt. Ltd. All rights reserved.</p>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/bganesh/" target="_blank" class="social-icon">in</a>
         <a href="https://www.youtube.com/skilltrainindia" target="_blank" class="social-icon">▶</a>
@@ -311,6 +208,7 @@
     </div>
   </div>
 </footer>
+
 <script src="../js/main.js"></script>
 </body>
 </html>

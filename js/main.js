@@ -1,26 +1,22 @@
 // SkillTrain — Main JS
 
-// Nav scroll effect
 const nav = document.querySelector('.nav');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 20) nav.classList.add('scrolled');
   else nav.classList.remove('scrolled');
 });
 
-// Mobile nav toggle
 const hamburger = document.querySelector('.nav-hamburger');
 const navLinks = document.querySelector('.nav-links');
 if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
   });
-  // Close on link click
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => navLinks.classList.remove('open'));
   });
 }
 
-// Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -32,7 +28,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObserver.observe(el));
 
-// Active nav link
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 window.addEventListener('scroll', () => {
@@ -46,7 +41,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Contact form
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -62,8 +56,7 @@ if (form) {
   });
 }
 
-// Counter animation
-function animateCounter(el, target, suffix = '') {
+function animateCounter(el, target, suffix) {
   let start = 0;
   const duration = 1800;
   const step = target / (duration / 16);
@@ -82,7 +75,7 @@ const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       const el = e.target;
-      const target = parseInt(el.dataset.counter);
+      const target = parseInt(el.dataset.counter, 10);
       const suffix = el.dataset.suffix || '';
       animateCounter(el, target, suffix);
       counterObserver.unobserve(el);
