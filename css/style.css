@@ -410,3 +410,54 @@ ul { list-style: none; }
 .nav-links.open a { font-size: 18px; padding: 14px 16px; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============ CLIENT BADGES — refined v2 ============ */
+.clients-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.client-badge {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.25s;
+  min-height: 64px;
+}
+.client-badge:hover {
+  border-color: var(--teal-mid);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  transform: translateY(-3px);
+}
+.client-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.client-badge .name {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--earth-dark);
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .clients-logos { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .clients-logos { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .client-badge { padding: 16px 12px; }
+  .client-badge .name { font-size: 13px; }
+}
+@media (max-width: 480px) {
+  .clients-logos { grid-template-columns: 1fr 1fr; }
+}
