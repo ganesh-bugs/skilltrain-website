@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Your Strategy Offsite Produced a Beautiful Document That Nobody Implemented — SkillTrain Insights</title>
+  <meta name="description" content="Why Your Strategy Offsite Produced a Beautiful Document That Nobody Implemented — insights from Ganesh Balasubramanian and the SkillTrain team." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="../images/logo-mark-colour.svg" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, var(--teal-deep), #0D4A4A);
+      padding: 130px 32px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+    .article-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .article-tag {
+      display: inline-block;
+      font-family: var(--font-accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: rgba(232,135,42,0.15);
+      border: 1px solid rgba(232,135,42,0.35);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: white;
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+    }
+    .article-meta-avatar {
+      width: 32px; height: 32px;
+      background: var(--amber);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 13px;
+      color: white;
+    }
+    .article-body-section {
+      padding: 64px 32px 40px;
+      background: var(--white);
+    }
+    .article-body {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .article-body p {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--earth-dark);
+      margin: 44px 0 18px;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--earth-dark);
+      margin: 32px 0 14px;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--teal-deep);
+      background: var(--teal-light);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--teal-deep);
+      line-height: 1.7;
+    }
+    .article-body ul {
+      margin: 0 0 24px 0;
+      padding-left: 0;
+    }
+    .article-body li {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .article-body li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--amber);
+      border-radius: 50%;
+    }
+    .article-cta-box {
+      background: var(--teal-light);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 48px 0;
+      text-align: center;
+    }
+    .article-cta-box p {
+      margin-bottom: 16px !important;
+      color: var(--teal-deep) !important;
+      font-weight: 500;
+    }
+    .article-nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      margin-bottom: 32px;
+    }
+    .article-share {
+      max-width: 700px;
+      margin: 0 auto 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .article-author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .article-author-box img {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
+      <span class="wordmark">
+        <span class="wordmark-name">SkillTrain</span>
+        <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="clients.html">Clients</a>
+      <a href="impact.html">Social Impact</a>
+      <a href="insights.html" class="active">Insights</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-tag">Strategy & Vision</span>
+    <h1 class="article-title">Why Your Strategy Offsite Produced a Beautiful Document That Nobody Implemented</h1>
+    <div class="article-meta">
+      <div class="article-meta-avatar">GB</div>
+      <span>Ganesh Balasubramanian &middot; 5 min read</span>
+    </div>
+  </div>
+</div>
+
+<section class="article-body-section">
+  <div class="article-body reveal">
+    <a href="insights.html" class="article-nav-back">&#8592; Back to Insights</a>
+
+    <p>You've seen this before: a leadership team spends two days at an offsite, energy is high, the whiteboard fills up with ambitious priorities, someone takes great notes, and a polished strategy document gets circulated the following week. Three months later, almost none of it has actually happened.</p>
+
+    <p>This isn't because the ideas were bad. It's because strategy sessions almost always fail at the same stage: the translation from <em>aspiration</em> to <em>action</em>. Great facilitation is the difference between a session that produces inspiration and one that produces a plan people actually execute.</p>
+
+    <h2>Where Strategy Sessions Go Wrong</h2>
+    <p>A few patterns show up again and again in poorly facilitated strategy sessions:</p>
+    <ul>
+      <li><strong>Too much discussion, not enough decision.</strong> Teams debate options thoroughly but never explicitly choose. Everyone leaves with a different mental model of what was actually decided.</li>
+      <li><strong>No owner, no date.</strong> Priorities get listed without anyone being named accountable, and without a timeline. Without both, a priority is just an idea.</li>
+      <li><strong>The loudest voice wins, not the best idea.</strong> Without structure, senior or vocal participants dominate, and quieter — sometimes more accurate — perspectives never surface.</li>
+      <li><strong>No mechanism to revisit.</strong> The plan is set once and never checked again until the next annual offsite, by which point circumstances have already shifted.</li>
+    </ul>
+
+    <h2>What Good Facilitation Actually Does</h2>
+    <p>The role of a skilled, neutral facilitator isn't to have the best ideas in the room — it's to create the conditions where the room's collective thinking actually converges into something executable.</p>
+
+    <blockquote>"A facilitator's job is not to make the meeting nice. It's to make sure that what gets decided in the room is precise enough that two people leaving the room would describe it the same way."</blockquote>
+
+    <h3>Structure Before Content</h3>
+    <p>Good sessions are designed before they happen — with a clear sequence (diverge, then converge), explicit time-boxes for each stage, and a deliberate mechanism for surfacing disagreement early rather than letting it simmer unspoken.</p>
+
+    <h3>Decisions, Not Just Discussions</h3>
+    <p>Every agenda item should end with an explicit decision, owner, and date — captured in the room, confirmed out loud, not interpreted afterward from someone's notes.</p>
+
+    <h3>Translation Is Part of the Job</h3>
+    <p>Vision statements like "become the most customer-centric company in our category" are not yet strategy. Good facilitation pushes the room to translate ambition into the handful of concrete choices that would actually make that vision true this year — and just as importantly, what the team will explicitly <em>not</em> do as a result.</p>
+
+    <h2>A Simple Test</h2>
+    <p>After your next strategy session, ask three attendees independently: "What did we actually decide, and who owns it?" If you get three different answers, the facilitation — not the strategy — was the problem.</p>
+
+    <div class="article-cta-box">
+      <p>Planning a strategy retreat or offsite?</p>
+      <a href="services.html#strategy" class="btn-primary" style="font-size:14px; padding:12px 26px;">Explore VisionCraft™ &#8594;</a>
+    </div>
+
+  </div>
+
+  <div class="article-share">
+    <div class="article-author-box">
+      <img src="../images/ganesh.jpg" alt="Ganesh Balasubramanian" />
+      <div>
+        <div style="font-weight:700; color:var(--earth-dark); font-size:15px;">Ganesh Balasubramanian</div>
+        <div style="font-size:13px; color:var(--text-light);">Founder &amp; CEO, SkillTrain</div>
+      </div>
+    </div>
+    <a href="contact.html" class="btn-teal" style="font-size:14px; padding:12px 24px;">Discuss This With Us &#8594;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-wrap">
+          <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
+          <span class="wordmark">
+            <span class="wordmark-name">SkillTrain</span>
+            <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+          </span>
+        </div>
+        <p class="footer-desc">A global leadership development, executive coaching, and people development organization. Headquartered in India. Serving organizations worldwide.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="services.html#pipeline">PipelineForge™</a></li>
+          <li><a href="services.html#leadership">LeaderShift™</a></li>
+          <li><a href="services.html#coaching">CoachForward™</a></li>
+          <li><a href="services.html#manager">ManagerEdge™</a></li>
+          <li><a href="services.html#strategy">VisionCraft™</a></li>
+          <li><a href="services.html#keynote">SparkTalk™</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="impact.html">Social Impact</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links">
+          <li><a href="#" data-email-user="ganesh" data-email-domain="skilltrain.co.in" rel="nofollow">ganesh [at] skilltrain [dot] co [dot] in</a></li>
+          <li><a href="https://www.linkedin.com/in/bganesh/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/skilltrainindia" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 SkillTrain Training &amp; Consultancy India Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/bganesh/" target="_blank" class="social-icon">in</a>
+        <a href="https://www.youtube.com/skilltrainindia" target="_blank" class="social-icon">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
