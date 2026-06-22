@@ -121,13 +121,13 @@ const counterObserver = new IntersectionObserver((entries) => {
 counterEls.forEach(el => counterObserver.observe(el));
 
 // Email obfuscation — protects against simple bot scraping
-// Decodes and injects mailto links at runtime instead of having them in raw HTML
+// Builds a working mailto link at runtime, but keeps the visible text obfuscated
 document.querySelectorAll('[data-email-user]').forEach(el => {
   const user = el.getAttribute('data-email-user');
   const domain = el.getAttribute('data-email-domain');
   const email = user + '@' + domain;
   el.setAttribute('href', 'mailto:' + email);
-  if (el.textContent.trim() === '' || el.dataset.emailText === 'true') {
-    el.textContent = email;
-  }
+  el.setAttribute('title', 'Click to email us');
+  // Intentionally do NOT set textContent to the real address —
+  // the visible label stays as the obfuscated placeholder in the HTML
 });
