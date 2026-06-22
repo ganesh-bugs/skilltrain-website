@@ -116,10 +116,42 @@
     <p class="section-eyebrow" style="color:var(--amber);">Stay Informed</p>
     <h2 class="section-title" style="color:white;">Get Leadership Insights <em style="color:var(--amber);">Directly</em></h2>
     <p class="section-subtitle" style="color:rgba(255,255,255,0.7);">Join leaders from across the globe who receive SkillTrain's periodic insights on leadership, coaching, and people development.</p>
-    <div style="max-width:480px; margin:40px auto 0; display:flex; gap:12px; flex-wrap:wrap;">
-      <input type="email" placeholder="Your email address" style="flex:1; min-width:200px; padding:14px 20px; border:none; border-radius:50px; font-size:15px; outline:none;" />
-      <button class="btn-primary" style="white-space:nowrap; border:none; cursor:pointer;">Subscribe &#8594;</button>
-    </div>
+    <!-- Brevo Newsletter Form — styled to match SkillTrain site design -->
+    <form id="sib-form" method="POST" action="https://31306083.sibforms.com/serve/MUIFALO5GsXDZX8GzsCY5pjbiJy-5eimt1aE18_flcpU7LXVI5lwH_F8sVk-27xP9AFyaKwPRnotLhXU4GFoMH6m7hpxParrqWCvbLk0VuJ2n6lDwQ7w4EjCdegqW4c6RGNNj8XkX3kisEU1zqubMlHeEGMLp_Henf6IXNytjPzjr4Nvx0VdtKzxrJH2WUwnkb9eHwwl1LMjQx1r7A==" data-type="subscription">
+      <div style="max-width:480px; margin:40px auto 0; display:flex; gap:12px; flex-wrap:wrap;">
+        <input
+          class="input"
+          type="email"
+          id="EMAIL"
+          name="EMAIL"
+          autocomplete="off"
+          placeholder="Your email address"
+          data-required="true"
+          required
+          style="flex:1; min-width:200px; padding:14px 20px; border:none; border-radius:50px; font-size:15px; outline:none;"
+        />
+        <button class="btn-primary" type="submit" style="white-space:nowrap; border:none; cursor:pointer;">Subscribe &#8594;</button>
+      </div>
+
+      <!-- Minimal reCAPTCHA — required by Brevo for spam protection -->
+      <div style="display:flex; justify-content:center; margin-top:16px;">
+        <div class="g-recaptcha" id="sib-captcha" data-sitekey="6Lff5SwtAAAAAHe35gEQJAZptagLV-xx3rEcuXgw" data-callback="handleCaptchaResponse" data-size="compact"></div>
+      </div>
+
+      <!-- Hidden anti-spam / required fields from Brevo -->
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important;">
+      <input type="hidden" name="locale" value="en">
+
+      <p id="newsletterStatus" style="margin-top:14px; font-size:13px; text-align:center; display:none; color:white;"></p>
+    </form>
+
+    <script>
+      function handleCaptchaResponse() {
+        var event = new Event('captchaChange');
+        document.getElementById('sib-captcha').dispatchEvent(event);
+      }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
     <p style="font-size:12px; color:rgba(255,255,255,0.4); margin-top:16px;">No spam. Unsubscribe any time.</p>
   </div>
 </section>
