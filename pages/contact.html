@@ -49,7 +49,7 @@
         <p class="contact-info-text">Whether you're a CXO thinking about your leadership team, an HR leader looking for a development partner, or a founder who wants to build the right culture from day one — we'd love to hear from you.</p>
         <p class="contact-info-text">There's no standard sales pitch here. Every conversation starts with us listening — deeply — to what you need.</p>
         <div class="contact-details">
-          <div class="contact-detail"><div class="contact-detail-icon">📧</div><div><strong style="display:block; font-size:13px; color:var(--earth-dark);">Email</strong><a href="mailto:ganesh@skilltrain.in" style="color:var(--teal-deep);">ganesh@skilltrain.in</a></div></div>
+          <div class="contact-detail"><div class="contact-detail-icon">📧</div><div><strong style="display:block; font-size:13px; color:var(--earth-dark);">Email</strong><a href="#" data-email-user="ganesh" data-email-domain="skilltrain.co.in" data-email-text="true" rel="nofollow" style="color:var(--teal-deep);">ganesh [at] skilltrain [dot] co [dot] in</a></div></div>
           <div class="contact-detail"><div class="contact-detail-icon">🌐</div><div><strong style="display:block; font-size:13px; color:var(--earth-dark);">Website</strong><span>www.skilltrain.in</span></div></div>
           <div class="contact-detail"><div class="contact-detail-icon">in</div><div><strong style="display:block; font-size:13px; color:var(--earth-dark);">LinkedIn</strong><a href="https://www.linkedin.com/in/bganesh/" target="_blank" style="color:var(--teal-deep);">linkedin.com/in/bganesh</a></div></div>
           <div class="contact-detail"><div class="contact-detail-icon">▶</div><div><strong style="display:block; font-size:13px; color:var(--earth-dark);">YouTube</strong><a href="https://www.youtube.com/skilltrainindia" target="_blank" style="color:var(--teal-deep);">SkillTrain India</a></div></div>
@@ -64,7 +64,9 @@
         <div class="contact-form">
           <h3 style="font-family:var(--font-display); font-size:22px; font-weight:600; color:var(--earth-dark); margin-bottom:8px;">Send Us a Message</h3>
           <p style="font-size:14px; color:var(--text-light); margin-bottom:28px;">We respond within 24 hours on business days.</p>
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/xqevkzoq" method="POST">
+            <input type="hidden" name="_subject" value="New enquiry from SkillTrain website" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" name="firstName" placeholder="Arun" required /></div>
               <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" name="lastName" placeholder="Sharma" required /></div>
@@ -100,6 +102,7 @@
             </div>
             <div class="form-group"><label for="message">Tell Us About Your Need *</label><textarea id="message" name="message" placeholder="Describe your challenge, goal, or the kind of support you're looking for. The more context you share, the better we can prepare for our conversation." required></textarea></div>
             <button type="submit" class="form-submit">Send Message &#8594;</button>
+            <p id="formStatus" style="margin-top:14px; font-size:14px; text-align:center; display:none;"></p>
           </form>
         </div>
       </div>
@@ -160,7 +163,7 @@
       <div>
         <p class="footer-col-title">Contact</p>
         <ul class="footer-links">
-          <li><a href="mailto:ganesh@skilltrain.in">ganesh@skilltrain.in</a></li>
+          <li><a href="#" data-email-user="ganesh" data-email-domain="skilltrain.co.in" data-email-text="true" rel="nofollow">ganesh [at] skilltrain [dot] co [dot] in</a></li>
           <li><a href="https://www.linkedin.com/in/bganesh/" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.youtube.com/skilltrainindia" target="_blank">YouTube</a></li>
         </ul>

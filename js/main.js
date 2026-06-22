@@ -43,16 +43,52 @@ window.addEventListener('scroll', () => {
 
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('.form-submit');
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#2A9090';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
+    const status = document.getElementById('formStatus');
+    const originalBtnText = btn.textContent;
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    if (status) { status.style.display = 'none'; }
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        btn.textContent = '✓ Message Sent!';
+        btn.style.background = '#2A9090';
+        if (status) {
+          status.textContent = "Thank you — we've received your message and will be in touch within 24 hours.";
+          status.style.color = '#2A9090';
+          status.style.display = 'block';
+        }
+        form.reset();
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      btn.textContent = originalBtnText;
       btn.style.background = '';
-      form.reset();
-    }, 3000);
+      if (status) {
+        status.textContent = "Something went wrong sending your message. Please try again, or email us directly.";
+        status.style.color = '#C0392B';
+        status.style.display = 'block';
+      }
+    } finally {
+      btn.disabled = false;
+      setTimeout(() => {
+        if (btn.textContent === '✓ Message Sent!') {
+          btn.textContent = originalBtnText;
+          btn.style.background = '';
+        }
+      }, 4000);
+    }
   });
 }
 
@@ -83,3 +119,15 @@ const counterObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 counterEls.forEach(el => counterObserver.observe(el));
+
+// Email obfuscation — protects against simple bot scraping
+// Decodes and injects mailto links at runtime instead of having them in raw HTML
+document.querySelectorAll('[data-email-user]').forEach(el => {
+  const user = el.getAttribute('data-email-user');
+  const domain = el.getAttribute('data-email-domain');
+  const email = user + '@' + domain;
+  el.setAttribute('href', 'mailto:' + email);
+  if (el.textContent.trim() === '' || el.dataset.emailText === 'true') {
+    el.textContent = email;
+  }
+});
