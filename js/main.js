@@ -120,6 +120,51 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 counterEls.forEach(el => counterObserver.observe(el));
 
+// Newsletter signup — intercepts Brevo form submission so the page doesn't
+// redirect to sibforms.com. Brevo's endpoint has no CORS headers, so we use
+// no-cors; an opaque response is indistinguishable from success, so we treat
+// any resolved fetch as success and only show an error on network failure.
+const sibForm = document.getElementById('sib-form');
+if (sibForm) {
+  sibForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = document.getElementById('newsletterStatus');
+    const btn = sibForm.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+
+    btn.disabled = true;
+    btn.textContent = 'Subscribing…';
+    if (status) status.style.display = 'none';
+
+    try {
+      await fetch(sibForm.action, {
+        method: 'POST',
+        body: new FormData(sibForm),
+        mode: 'no-cors'
+      });
+      if (status) {
+        status.textContent = 'Thanks — you’re subscribed!';
+        status.style.display = 'block';
+      }
+      sibForm.reset();
+      if (window.grecaptcha) grecaptcha.reset();
+    } catch (err) {
+      if (status) {
+        status.textContent = 'Something went wrong — please try again.';
+        status.style.display = 'block';
+      }
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }
+  });
+}
+
+// Must be a named global so reCAPTCHA's data-callback can reference it
+function handleCaptchaResponse() {
+  var event = new Event('captchaChange');
+  document.getElementById('sib-captcha').dispatchEvent(event);
+}
+
 // Email obfuscation — protects against simple bot scraping
 // Builds a working mailto link at runtime, but keeps the visible text obfuscated
 document.querySelectorAll('[data-email-user]').forEach(el => {
