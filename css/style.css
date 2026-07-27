@@ -355,11 +355,10 @@ ul { list-style: none; }
 .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
 .insight-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: all 0.3s; }
 .insight-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
-.insight-card-thumb { height: 180px; background: linear-gradient(135deg, var(--teal-light), var(--amber-light)); display: flex; align-items: center; justify-content: center; font-size: 48px; }
 .insight-card-body { padding: 24px; }
 .insight-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 10px; }
 .insight-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--earth-dark); line-height: 1.4; margin-bottom: 10px; }
-.insight-excerpt { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+.insight-excerpt { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
 .insight-meta { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 12px; color: var(--text-light); }
 
 /* ============ UTILITY ============ */
@@ -397,6 +396,10 @@ ul { list-style: none; }
   .nav-inner { padding: 0 20px; }
   .footer { padding: 56px 20px 28px; }
   .nav-logo .wordmark-tag { display: none; }
+  .insight-card-body { padding: 28px 24px; }
+  .insight-excerpt { font-size: 16px; }
+  .insight-meta { font-size: 13px; }
+  .service-desc, .testimonial-text, .footer-desc { font-size: 16px; }
 }
 @media (max-width: 480px) {
   .approach-grid { grid-template-columns: 1fr; }
@@ -405,10 +408,20 @@ ul { list-style: none; }
   .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; text-align: center; justify-content: center; }
   .nav-logo .wordmark-name { font-size: 18px; }
 }
-.nav-links.open { display: flex; flex-direction: column; position: fixed; top: 76px; left: 0; right: 0; bottom: 0; background: var(--white); padding: 32px; gap: 4px; z-index: 999; border-top: 1px solid var(--border); overflow-y: auto; }
-.nav-links.open a { font-size: 18px; padding: 14px 16px; }
+/* .nav has backdrop-filter, which makes it the containing block for fixed-position
+   descendants — so bottom:0 here would resolve against .nav's own ~76px box instead
+   of the viewport. Use an explicit viewport-relative height instead. */
+.nav-links.open { display: flex; flex-direction: column; position: fixed; top: 76px; left: 0; right: 0; height: calc(100vh - 76px); height: calc(100dvh - 76px); background: var(--white); padding: 32px; gap: 4px; z-index: 1000; border-top: 1px solid var(--border); overflow-y: auto; }
+.nav-links.open a { font-size: 18px; padding: 14px 16px; border-radius: var(--radius-sm); }
+.nav-links.open a.active { background: var(--teal-light); color: var(--teal-deep); }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+/* On mobile the IntersectionObserver doesn't reliably fire for tall elements
+   (e.g. long article bodies) before the user scrolls to them, which can leave
+   content stuck at opacity:0. Skip the reveal animation on mobile entirely. */
+@media (max-width: 768px) {
+  .reveal, .reveal.visible { opacity: 1; transform: none; }
+}
 
 /* ============ CLIENT LOGO CARDS ============ */
 .clients-logos {
