@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 4P Diagnostic: Sixteen Questions Worth Sitting With — SkillTrain Insights</title>
+  <meta name="description" content="Sixteen questions across Purpose, People, Process and Performance — a self-diagnostic for leadership teams, and the capstone to SkillTrain's 4P Framework series." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="../images/logo-mark-colour.svg" />
+<style>
+    .article-hero {
+      background: linear-gradient(135deg, var(--teal-deep), #0D4A4A);
+      padding: 130px 32px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+    .article-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .article-tag {
+      display: inline-block;
+      font-family: var(--font-accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: rgba(232,135,42,0.15);
+      border: 1px solid rgba(232,135,42,0.35);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: white;
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+    }
+    .article-meta-avatar {
+      width: 32px; height: 32px;
+      background: var(--amber);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 13px;
+      color: white;
+    }
+    .article-body-section {
+      padding: 64px 32px 40px;
+      background: var(--white);
+    }
+    .article-body {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .article-body p {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--earth-dark);
+      margin: 44px 0 18px;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--earth-dark);
+      margin: 32px 0 14px;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--teal-deep);
+      background: var(--teal-light);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--teal-deep);
+      line-height: 1.7;
+    }
+    .article-body ul {
+      margin: 0 0 24px 0;
+      padding-left: 0;
+    }
+    .article-body li {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .article-body li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--amber);
+      border-radius: 50%;
+    }
+    .article-cta-box {
+      background: var(--teal-light);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 48px 0;
+      text-align: center;
+    }
+    .article-cta-box p {
+      margin-bottom: 16px !important;
+      color: var(--teal-deep) !important;
+      font-weight: 500;
+    }
+    .article-nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      margin-bottom: 32px;
+      padding: 6px 4px;
+    }
+    .article-share {
+      max-width: 700px;
+      margin: 0 auto 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .article-author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .article-author-box img {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .series-banner {
+      max-width: 700px;
+      margin: 0 auto 36px;
+      background: var(--teal-light);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 22px;
+    }
+    .series-banner p {
+      font-size: 14px !important;
+      color: var(--teal-deep) !important;
+      margin: 0 !important;
+      line-height: 1.6 !important;
+    }
+    .series-banner strong { font-weight: 700; }
+    .series-nav {
+      max-width: 700px;
+      margin: 48px auto 0;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .series-nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      text-decoration: none;
+    }
+    .series-nav a:hover { color: var(--amber); }
+    .series-nav span { font-size: 14px; color: var(--text-light); }
+
+    .article-sources {
+      margin: 48px 0 0;
+      padding: 26px 28px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .article-sources h3 {
+      font-family: var(--font-accent);
+      font-size: 12px !important;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      margin: 0 0 18px !important;
+    }
+    .article-sources ol {
+      margin: 0;
+      padding-left: 20px;
+      list-style: decimal;
+    }
+    .article-sources li {
+      font-size: 14px !important;
+      color: var(--text-mid);
+      line-height: 1.7 !important;
+      margin-bottom: 11px;
+      padding-left: 4px !important;
+      position: static !important;
+    }
+    .article-sources li::before { display: none !important; }
+    .article-sources li:last-child { margin-bottom: 0; }
+    .article-sources a {
+      color: var(--teal-deep);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .article-sources a:hover { color: var(--amber); }
+    .article-sources .src-note {
+      font-size: 13px !important;
+      color: var(--text-light);
+      margin: 16px 0 0 !important;
+      line-height: 1.6 !important;
+      font-style: italic;
+    }
+    @media (max-width: 768px) {
+      .article-hero { padding: 110px 24px 48px; }
+      .article-nav-back { font-size: 16px; padding: 10px 6px; margin-bottom: 24px; }
+    }
+
+    .diag-block {
+      max-width: 700px;
+      margin: 36px auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .diag-head {
+      background: var(--teal-deep);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .diag-head .diag-num {
+      background: var(--amber);
+      color: var(--teal-deep);
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .diag-head h3 {
+      font-family: var(--font-accent);
+      font-size: 13px !important;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #F4EFE6;
+      margin: 0 !important;
+    }
+    .diag-body { background: var(--white); padding: 8px 24px 20px; }
+    .diag-q { padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .diag-q:last-child { border-bottom: none; }
+    .diag-q p.q {
+      font-size: 16px !important;
+      font-weight: 600;
+      color: var(--earth-dark) !important;
+      font-style: italic;
+      margin: 0 0 8px !important;
+      line-height: 1.5 !important;
+    }
+    .diag-q p.a {
+      font-size: 15px !important;
+      color: var(--text-mid) !important;
+      margin: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .series-index {
+      max-width: 700px;
+      margin: 44px auto 0;
+      padding: 26px 28px;
+      background: var(--teal-light);
+      border-radius: 14px;
+    }
+    .series-index h3 {
+      font-family: var(--font-accent);
+      font-size: 12px !important;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      margin: 0 0 16px !important;
+    }
+    .series-index ol { margin: 0; padding-left: 20px; list-style: decimal; }
+    .series-index li {
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+      margin-bottom: 9px;
+      color: var(--text-mid);
+      padding-left: 4px !important;
+      position: static !important;
+    }
+    .series-index li::before { display: none !important; }
+    .series-index li:last-child { margin-bottom: 0; }
+    .series-index a { color: var(--teal-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+    .series-index a:hover { color: var(--amber); }
+    .series-index .current { color: var(--text-light); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
+      <span class="wordmark">
+        <span class="wordmark-name">SkillTrain</span>
+        <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="clients.html">Clients</a>
+      <a href="impact.html">Social Impact</a>
+      <a href="insights.html" class="active">Insights</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-tag">4P Framework</span>
+    <h1 class="article-title">The 4P Diagnostic: Sixteen Questions Worth Sitting With</h1>
+    <div class="article-meta">
+      <div class="article-meta-avatar">GB</div>
+      <span>Ganesh Balasubramanian &middot; 9 min read</span>
+    </div>
+  </div>
+</div>
+
+<section class="article-body-section">
+  <div class="article-body reveal">
+    <a href="insights.html" class="article-nav-back">&#8592; Back to Insights</a>
+
+    <div class="series-banner">
+      <p><strong>The capstone</strong> &middot; The SkillTrain 4P Framework series &mdash; Purpose, People, Process, Performance.</p>
+    </div>
+
+    <p>Over the previous five articles, this series has made a single argument in four parts. Purpose defines the why. People carry it forward. Process ensures it holds when nobody is watching. Performance is what those three produce.</p>
+
+    <p>The argument beneath the argument is that these are not four initiatives to be sequenced, resourced and reported on separately. They are one system &mdash; and the evidence for treating them that way is stronger than most leadership teams realize. McKinsey's research on transformations found that successful ones are nearly eight times more likely to use all four core change levers together than to rely on a single one. Organizations do not usually fail inside a pillar. They fail at the seams between them.</p>
+
+    <p>This final article is therefore not another argument. It is an instrument.</p>
+
+    <p>What follows is a diagnostic &mdash; sixteen questions, four per pillar, designed to be answered honestly rather than aspirationally. It takes about twenty minutes alone, or an hour with a leadership team if you are willing to let people disagree. The questions are deliberately uncomfortable, because comfortable questions produce answers you already know.</p>
+
+    <h2>A Note on How to Use This</h2>
+    <p>Two instructions matter more than the questions themselves.</p>
+
+    <p>First, answer for the organization as it actually operates, not as it is described in the strategy deck. The gap between those two is usually where the diagnostic does its work.</p>
+
+    <p>Second, resist the urge to score well. The purpose is not to confirm that things are broadly fine. It is to locate the pillar you have quietly stopped thinking about &mdash; because that is nearly always the one your performance data is trying to tell you about.</p>
+
+    <div class="diag-block">
+      <div class="diag-head"><span class="diag-num">1</span><h3>Purpose</h3></div>
+      <div class="diag-body">
+        <div class="diag-q">
+          <p class="q">Can you name a specific decision in the last twelve months that your purpose prevented you from making?</p>
+          <p class="a">A client declined, an opportunity passed on, a shortcut refused. If nothing comes to mind, the purpose may be a description rather than a constraint. Purpose that has never cost anything has never been tested.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Would two managers in different divisions describe your purpose in recognizably similar terms?</p>
+          <p class="a">Not verbatim &mdash; that would only prove memorization. But would the substance match? Divergence here means the purpose exists at the top of the organization and dissipates on the way down.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Does your purpose help someone choose between two individually reasonable options?</p>
+          <p class="a">This is the practical test. A purpose that cannot arbitrate a genuine trade-off on an ordinary Tuesday is doing no work, however well written.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Has your purpose ever survived a quarter in which it was expensive to hold?</p>
+          <p class="a">Employees calibrate on exactly this. A value that gets set aside under pressure is understood, correctly and permanently, as optional.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="diag-block">
+      <div class="diag-head"><span class="diag-num">2</span><h3>People</h3></div>
+      <div class="diag-body">
+        <div class="diag-q">
+          <p class="q">What were your last three promotions into management actually rewarded for?</p>
+          <p class="a">Be specific. If the honest answer is individual technical excellence in all three cases, you have found a gap &mdash; Google's Project Oxygen found that among the behaviours distinguishing its most effective managers, coaching ranked first and technical expertise ranked last.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Could you name, right now, which of your managers are genuinely strong developers of people?</p>
+          <p class="a">If the list is short or vague, the organization is not tracking the variable that Gallup's research identifies as accounting for at least 70% of the variance in team engagement.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Do you know how much your engagement varies between teams, not just your organization-wide average?</p>
+          <p class="a">The average conceals the finding. Two teams under the same purpose, the same pay bands and the same policies can post radically different results, and the difference is largely the manager.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Who taught your managers how to manage?</p>
+          <p class="a">Most organizations answer this with a programme name. The more revealing follow-up is whether anything happened after it &mdash; coaching, practice, feedback &mdash; or whether the programme was the entirety of the investment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="diag-block">
+      <div class="diag-head"><span class="diag-num">3</span><h3>Process</h3></div>
+      <div class="diag-body">
+        <div class="diag-q">
+          <p class="q">Name the three behaviours you most want to be true of your organization. For each, what structurally makes it happen?</p>
+          <p class="a">Not who encourages it. What makes it happen. Amazon's internal doctrine is blunt on this point: good intentions don't work, mechanisms do.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">If the honest answer above is &ldquo;leadership sets the tone,&rdquo; what happens when leadership is elsewhere?</p>
+          <p class="a">Tone-setting is not a mechanism. It is a dependency on individual presence, which means the behaviour has a single point of failure.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Which of your current mechanisms no longer earns its place?</p>
+          <p class="a">This question protects against the legitimate objection to this pillar. Process calcifies. Every mechanism should have an owner and a scheduled question about whether it is still worth its cost.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Would your standards hold if you disappeared for six months?</p>
+          <p class="a">This is the pillar's essential test, and the sharpest formulation of what culture actually is. Culture is not what you believe. It is what survives your absence.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="diag-block">
+      <div class="diag-head"><span class="diag-num">4</span><h3>Performance</h3></div>
+      <div class="diag-body">
+        <div class="diag-q">
+          <p class="q">When results miss, where does the conversation go?</p>
+          <p class="a">If it stays on the number &mdash; targets, variance, accountability &mdash; you are working on the instrument rather than the system it measures. If it moves to clarity of direction, capability of managers and adequacy of mechanisms, you are reading it correctly.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Do you track input metrics, or only outputs?</p>
+          <p class="a">Outputs are lagging by definition; they report what already happened. Inputs are the controllable upstream behaviours, and they are the only part still open to influence.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">In the last time you improved a number quickly, what did you borrow from to do it?</p>
+          <p class="a">Deferred maintenance, deferred hiring, deferred training, discounted future revenue. The number improves and the capability that produced it degrades &mdash; invisibly, for two or three quarters.</p>
+        </div>
+        <div class="diag-q">
+          <p class="q">Can you name which of the first three pillars your current performance is reporting on?</p>
+          <p class="a">This is the closing question of the series, and the point of the whole framework. DDI's Global Leadership Forecast found organizations developing leaders at every level are 1.7 times more likely to be top financial performers; McKinsey's Organizational Health Index found the healthiest organizations deliver roughly three times the total shareholder returns of the least healthy. Neither study measured how hard companies chased results. Both measured how well they were built.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <h2>What to Do With the Answers</h2>
+    <p>Most leadership teams that run this honestly find the same shape: strong in one pillar, adequate in a second, and unable to say much at all about the remaining two.</p>
+
+    <p>That is not a failure of leadership. It is a consequence of attention being finite. Every organization develops competence where its leaders have background, interest and confidence &mdash; an operationally-minded CEO builds process, a people-centred one builds culture &mdash; and the pillars outside that competence quietly stop being discussed.</p>
+
+    <blockquote>The useful move is not to launch four workstreams. It is to pick the pillar you found hardest to answer and treat that as the hypothesis for the next two quarters. The four Ps are a system, but systems are repaired at their weakest joint, not everywhere simultaneously.</blockquote>
+
+    <p>And if one of these sixteen questions produced a flicker of discomfort &mdash; a question you would rather not put to your leadership team &mdash; that is worth more than the other fifteen combined. Discomfort is usually just recognition arriving before you are ready for it.</p>
+
+    <div class="series-index">
+      <h3>The Complete 4P Framework Series</h3>
+      <ol>
+        <li><a href="article-4p-framework-one-system.html">The 4 Ps of Leadership: Why They Can't Be Solved One at a Time</a></li>
+        <li><a href="article-purpose-must-cost-something.html">Purpose Only Counts When It Costs You Something</a></li>
+        <li><a href="article-people-hardest-to-fake.html">People: The Hardest P to Fake</a></li>
+        <li><a href="article-process-survives-your-absence.html">Process: What Survives Your Absence</a></li>
+        <li><a href="article-performance-readout-not-lever.html">Performance: The Readout, Not the Lever</a></li>
+        <li><span class="current">The 4P Diagnostic: Sixteen Questions Worth Sitting With &mdash; you are here</span></li>
+      </ol>
+    </div>
+
+
+    <div class="article-sources">
+      <h3>Sources &amp; References</h3>
+      <ol>
+        <li>McKinsey &amp; Company, &ldquo;The science of organizational transformations.&rdquo; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-science-of-organizational-transformations" target="_blank" rel="noopener">Read the research &#8599;</a></li>
+        <li>Google re:Work, &ldquo;Project Oxygen,&rdquo; and Harvard Business School case study &ldquo;Google's Project Oxygen: Do Managers Matter?&rdquo; (David A. Garvin, 2013).</li>
+        <li>Gallup, &ldquo;The Relationship Between Engagement at Work and Organizational Outcomes&rdquo; (Q12 Meta-Analysis), and &ldquo;State of the American Manager,&rdquo; 2015. <a href="https://www.gallup.com/workplace/321725/gallup-q12-meta-analysis-report.aspx" target="_blank" rel="noopener">Read the report &#8599;</a></li>
+        <li>Colin Bryar &amp; Bill Carr, <em>Working Backwards</em> &mdash; source for Amazon's &ldquo;mechanisms, not good intentions&rdquo; doctrine.</li>
+        <li>DDI, <em>Global Leadership Forecast 2025</em>. <a href="https://www.ddi.com/research/global-leadership-forecast-2025" target="_blank" rel="noopener">View the research &#8599;</a></li>
+        <li>McKinsey &amp; Company, &ldquo;Organizational health is (still) the key to long-term performance,&rdquo; 2024. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/organizational-health-is-still-the-key-to-long-term-performance" target="_blank" rel="noopener">Read the research &#8599;</a></li>
+      </ol>
+      <p class="src-note">All statistics are quoted as reported by the original sources. Figures drawn from annually updated studies may differ in later editions, and company-reported figures are identified as such.</p>
+    </div>
+
+    <div class="article-cta-box">
+      <p>Want to run this diagnostic properly with your leadership team?</p>
+      <a href="contact.html" class="btn-primary" style="font-size:14px; padding:12px 26px;">Start a Conversation &#8594;</a>
+    </div>
+
+    <div class="series-nav">
+      <a href="article-performance-readout-not-lever.html">&#8592; Previous: Performance &mdash; The Readout, Not the Lever</a>
+      <a href="article-4p-framework-one-system.html">Read the series from the start &#8594;</a>
+    </div>
+
+  </div>
+
+  <div class="article-share">
+    <div class="article-author-box">
+      <img src="../images/ganesh.jpg" alt="Ganesh Balasubramanian" />
+      <div>
+        <div style="font-weight:700; color:var(--earth-dark); font-size:15px;">Ganesh Balasubramanian</div>
+        <div style="font-size:13px; color:var(--text-light);">Founder &amp; CEO, SkillTrain</div>
+      </div>
+    </div>
+    <a href="contact.html" class="btn-teal" style="font-size:14px; padding:12px 24px;">Discuss This With Us &#8594;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-wrap">
+          <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
+          <span class="wordmark">
+            <span class="wordmark-name">SkillTrain</span>
+            <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+          </span>
+        </div>
+        <p class="footer-desc">A global leadership development, executive coaching, and people development organization. Headquartered in India. Serving organizations worldwide.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="services.html#pipeline">PipelineForge™</a></li>
+          <li><a href="services.html#leadership">LeaderShift™</a></li>
+          <li><a href="services.html#coaching">CoachForward™</a></li>
+          <li><a href="services.html#manager">ManagerEdge™</a></li>
+          <li><a href="services.html#strategy">VisionCraft™</a></li>
+          <li><a href="services.html#keynote">SparkTalk™</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="impact.html">Social Impact</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links">
+          <li><a href="#" data-email-user="ganesh" data-email-domain="skilltrain.co.in" rel="nofollow">ganesh [at] skilltrain [dot] co [dot] in</a></li>
+          <li><a href="https://www.linkedin.com/in/bganesh/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/skilltrainindia" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 SkillTrain Training &amp; Consultancy India Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/bganesh/" target="_blank" class="social-icon">in</a>
+        <a href="https://www.youtube.com/skilltrainindia" target="_blank" class="social-icon">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
