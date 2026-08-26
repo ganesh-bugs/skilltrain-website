@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where the 4P Framework Fails — SkillTrain Insights</title>
+  <meta name="description" content="Enron had the values statement. Nokia had the engineers. 3M had the process discipline. Wells Fargo had the metric. Four pillars, four documented failures — and what they reveal about the limits of any management framework." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="../images/logo-mark-colour.svg" />
+<style>
+    .article-hero {
+      background: linear-gradient(135deg, var(--teal-deep), #0D4A4A);
+      padding: 130px 32px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+    .article-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .article-tag {
+      display: inline-block;
+      font-family: var(--font-accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: rgba(232,135,42,0.15);
+      border: 1px solid rgba(232,135,42,0.35);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: white;
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+    }
+    .article-meta-avatar {
+      width: 32px; height: 32px;
+      background: var(--amber);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 13px;
+      color: white;
+    }
+    .article-body-section {
+      padding: 64px 32px 40px;
+      background: var(--white);
+    }
+    .article-body {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .article-body p {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--earth-dark);
+      margin: 44px 0 18px;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--earth-dark);
+      margin: 32px 0 14px;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--teal-deep);
+      background: var(--teal-light);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--teal-deep);
+      line-height: 1.7;
+    }
+    .article-body ul {
+      margin: 0 0 24px 0;
+      padding-left: 0;
+    }
+    .article-body li {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .article-body li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--amber);
+      border-radius: 50%;
+    }
+    .article-cta-box {
+      background: var(--teal-light);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 48px 0;
+      text-align: center;
+    }
+    .article-cta-box p {
+      margin-bottom: 16px !important;
+      color: var(--teal-deep) !important;
+      font-weight: 500;
+    }
+    .article-nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      margin-bottom: 32px;
+      padding: 6px 4px;
+    }
+    .article-share {
+      max-width: 700px;
+      margin: 0 auto 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .article-author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .article-author-box img {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .series-banner {
+      max-width: 700px;
+      margin: 0 auto 36px;
+      background: var(--teal-light);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 22px;
+    }
+    .series-banner p {
+      font-size: 14px !important;
+      color: var(--teal-deep) !important;
+      margin: 0 !important;
+      line-height: 1.6 !important;
+    }
+    .series-banner strong { font-weight: 700; }
+    .series-nav {
+      max-width: 700px;
+      margin: 48px auto 0;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .series-nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      text-decoration: none;
+    }
+    .series-nav a:hover { color: var(--amber); }
+    .series-nav span { font-size: 14px; color: var(--text-light); }
+
+    .article-sources {
+      margin: 48px 0 0;
+      padding: 26px 28px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .article-sources h3 {
+      font-family: var(--font-accent);
+      font-size: 12px !important;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      margin: 0 0 18px !important;
+    }
+    .article-sources ol {
+      margin: 0;
+      padding-left: 20px;
+      list-style: decimal;
+    }
+    .article-sources li {
+      font-size: 14px !important;
+      color: var(--text-mid);
+      line-height: 1.7 !important;
+      margin-bottom: 11px;
+      padding-left: 4px !important;
+      position: static !important;
+    }
+    .article-sources li::before { display: none !important; }
+    .article-sources li:last-child { margin-bottom: 0; }
+    .article-sources a {
+      color: var(--teal-deep);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .article-sources a:hover { color: var(--amber); }
+    .article-sources .src-note {
+      font-size: 13px !important;
+      color: var(--text-light);
+      margin: 16px 0 0 !important;
+      line-height: 1.6 !important;
+      font-style: italic;
+    }
+    @media (max-width: 768px) {
+      .article-hero { padding: 110px 24px 48px; }
+      .article-nav-back { font-size: 16px; padding: 10px 6px; margin-bottom: 24px; }
+    }
+
+    .diag-block {
+      max-width: 700px;
+      margin: 36px auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .diag-head {
+      background: var(--teal-deep);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .diag-head .diag-num {
+      background: var(--amber);
+      color: var(--teal-deep);
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .diag-head h3 {
+      font-family: var(--font-accent);
+      font-size: 13px !important;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #F4EFE6;
+      margin: 0 !important;
+    }
+    .diag-body { background: var(--white); padding: 8px 24px 20px; }
+    .diag-q { padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .diag-q:last-child { border-bottom: none; }
+    .diag-q p.q {
+      font-size: 16px !important;
+      font-weight: 600;
+      color: var(--earth-dark) !important;
+      font-style: italic;
+      margin: 0 0 8px !important;
+      line-height: 1.5 !important;
+    }
+    .diag-q p.a {
+      font-size: 15px !important;
+      color: var(--text-mid) !important;
+      margin: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .series-index {
+      max-width: 700px;
+      margin: 44px auto 0;
+      padding: 26px 28px;
+      background: var(--teal-light);
+      border-radius: 14px;
+    }
+    .series-index h3 {
+      font-family: var(--font-accent);
+      font-size: 12px !important;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      margin: 0 0 16px !important;
+    }
+    .series-index ol { margin: 0; padding-left: 20px; list-style: decimal; }
+    .series-index li {
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+      margin-bottom: 9px;
+      color: var(--text-mid);
+      padding-left: 4px !important;
+      position: static !important;
+    }
+    .series-index li::before { display: none !important; }
+    .series-index li:last-child { margin-bottom: 0; }
+    .series-index a { color: var(--teal-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+    .series-index a:hover { color: var(--amber); }
+    .series-index .current { color: var(--text-light); font-weight: 600; }
+
+    .fail-case {
+      max-width: 700px;
+      margin: 30px auto;
+      background: var(--off-white);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 26px;
+    }
+    .fail-case .fc-label {
+      font-family: var(--font-accent);
+      font-size: 11px !important;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin: 0 0 6px !important;
+    }
+    .fail-case .fc-claim {
+      font-size: 17px !important;
+      font-weight: 700;
+      color: var(--earth-dark) !important;
+      margin: 0 0 8px !important;
+      line-height: 1.4 !important;
+    }
+    .fail-case .fc-what {
+      font-size: 15px !important;
+      color: var(--text-mid) !important;
+      margin: 0 !important;
+      line-height: 1.65 !important;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
+      <span class="wordmark">
+        <span class="wordmark-name">SkillTrain</span>
+        <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="clients.html">Clients</a>
+      <a href="impact.html">Social Impact</a>
+      <a href="insights.html" class="active">Insights</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-tag">4P Framework</span>
+    <h1 class="article-title">Where the 4P Framework Fails</h1>
+    <div class="article-meta">
+      <div class="article-meta-avatar">GB</div>
+      <span>Ganesh Balasubramanian &middot; 10 min read</span>
+    </div>
+  </div>
+</div>
+
+<section class="article-body-section">
+  <div class="article-body reveal">
+    <a href="insights.html" class="article-nav-back">&#8592; Back to Insights</a>
+
+    <div class="series-banner">
+      <p><strong>The counter-argument</strong> &middot; The SkillTrain 4P Framework series &mdash; Purpose, People, Process, Performance.</p>
+    </div>
+
+    <p>Any consultancy that publishes a framework owes its readers an account of where that framework breaks down. This article is that account.</p>
+
+    <p>Over six previous pieces, this series argued that Purpose, People, Process and Performance operate as one system, and that organizational outcomes are largely determined by how well those four are built and connected. I still believe that. But the documented record contains organizations that had one or more of these pillars conspicuously in place &mdash; celebrated for it, in some cases &mdash; and failed anyway, sometimes catastrophically.</p>
+
+    <p>Those cases are not footnotes to the framework. They are the most useful thing in it.</p>
+
+    <h2>Purpose: Enron Had the Values Statement</h2>
+
+    <div class="fail-case">
+      <p class="fc-label">The Purpose Pillar</p>
+      <p class="fc-claim">Enron &mdash; a 64-page code of ethics, bankrupt within 14 months</p>
+      <p class="fc-what">Core values: Respect, Integrity, Communication, Excellence. Kenneth Lay's foreword stated that Enron's reputation for fairness and honesty depended entirely on its people upholding these standards.</p>
+    </div>
+
+
+    <p>Enron's 2000 Code of Ethics ran to 64 pages. Its four core values were Respect, Integrity, Communication and Excellence. The document was specific rather than vague: respect meant treating others as one would wish to be treated, and explicitly stated that ruthlessness, callousness and arrogance did not belong at the company. Integrity meant that when Enron said it would do something, it would.</p>
+
+    <p>Kenneth Lay's foreword to that code stated that Enron's reputation for fairness and honesty depended entirely on its people upholding these standards, and that without them the company's operations would be worthless.</p>
+
+    <p>Fourteen months later Enron was bankrupt.</p>
+
+    <p>The comfortable reading is that Enron's leaders were simply hypocrites, and that a sincere purpose would have produced a different outcome. That reading is too easy. The harder observation is that the values statement coexisted, without apparent friction, with a performance management system &mdash; the rank-and-yank forced ranking Jeffrey Skilling imported &mdash; that systematically rewarded the behaviours the values prohibited. Both were real. Both were operating. The values simply had no mechanism attached, while the ranking system had a very effective one.</p>
+
+    <blockquote>An articulated purpose is not evidence of a functioning one, and the existence of an impressive values document can actively obscure the absence of anything enforcing it.</blockquote>
+
+    <p>Worse, there is a plausible case that a strong stated purpose provides moral licence &mdash; a sense that because the organization is fundamentally good, individual compromises are survivable.</p>
+
+    <h2>People: Nokia Had the Engineers</h2>
+
+    <div class="fail-case">
+      <p class="fc-label">The People Pillar</p>
+      <p class="fc-claim">Nokia &mdash; world-class engineers, and nobody passed bad news upward</p>
+      <p class="fc-what">Vuori &amp; Huy's study in Administrative Science Quarterly found the failure had nothing to do with capability. It was shared fear, operating at two levels simultaneously.</p>
+    </div>
+
+
+    <p>Nokia in 2005 was not short of talent. It was the dominant force in mobile telephony, with deep engineering capability and a research operation that had produced genuine breakthroughs.</p>
+
+    <p>The most rigorous account of what happened next is Timo Vuori and Quy Huy's study published in <em>Administrative Science Quarterly</em> in 2016, based on interviews with Nokia managers and engineers alongside internal documents. Their finding is uncomfortable precisely because it has nothing to do with capability.</p>
+
+    <p>Vuori and Huy describe cycles of shared fear operating at two levels. Top managers were afraid of external competitors and shareholders. Middle managers were afraid of internal consequences &mdash; of superiors, of peers, of being the person who delivered bad news. Top managers' externally focused fear led them to apply pressure downward without fully disclosing how severe the external threat was. Middle managers' internally focused fear reduced their willingness to share negative information upward. The result was that senior leadership developed an over-optimistic picture of what Nokia's technology could actually do, and under-invested in the long-term development that would have mattered. The authors call the outcome temporal myopia: a focus on short-term product delivery at the expense of long-term capability.</p>
+
+    <p>The engineers were excellent throughout. What failed was the information system running between them and the people making decisions.</p>
+
+    <p>This is the limit of the people pillar. Talent density does not guarantee that what talented people know reaches the people who need to know it. An organization can be simultaneously full of capable individuals and structurally incapable of hearing them.</p>
+
+    <h2>Process: 3M Had the Discipline</h2>
+
+    <div class="fail-case">
+      <p class="fc-label">The Process Pillar</p>
+      <p class="fc-claim">3M &mdash; operating margins rose from 17% to 23%, and new-product revenue fell by roughly a third</p>
+      <p class="fc-what">Six Sigma delivered exactly what it was designed to deliver. The problem was that 3M's business model depended on something it was not designed to serve.</p>
+    </div>
+
+
+    <p>When James McNerney arrived at 3M as CEO in 2001 &mdash; a Jack Welch prot&eacute;g&eacute;, one of the final candidates to succeed Welch at GE &mdash; he brought Six Sigma with him and applied it across the company, including research and development.</p>
+
+    <p>On the terms Six Sigma is designed to serve, it worked. Operating margins rose from 17% in 2001 to 23% by 2005.</p>
+
+    <p>But 3M's business model depended on something Six Sigma is not designed to serve. The company had long maintained an internal expectation that a substantial share of revenue come from products introduced within the previous five years. As Brian Hindo reported in <em>BusinessWeek</em> in June 2007, the proportion of profits coming from products developed in the prior five years slipped from roughly one-third to about one-quarter over this period. Under the new regime, nascent research projects required extensive documentation before they could proceed.</p>
+
+    <p>McNerney's successor George Buckley subsequently de-emphasised Six Sigma in R&amp;D and increased research spending. His explanation was direct: invention is by its very nature a disorderly process, and you cannot schedule yourself for three good ideas on Wednesday and two on Friday.</p>
+
+    <p>It is worth being careful about causation here. Buckley's own reflection was that valuing sameness above creativity risks undermining the heart of a company like 3M, and academic commentators including Douglas Montgomery have noted that R&amp;D funding was also held flat during the period, so Six Sigma may not be the sole explanation. But the directional lesson holds, and 3M itself acted on it.</p>
+
+    <p>This is the limit of the process pillar. Mechanisms optimise for consistency, and consistency is precisely the wrong objective for activities whose value comes from variance. Applied indiscriminately, process discipline does not merely fail to help &mdash; it removes the disorder that the organization's advantage depended on.</p>
+
+    <h2>Performance: Wells Fargo Had the Metric</h2>
+
+    <div class="fail-case">
+      <p class="fc-label">The Performance Pillar</p>
+      <p class="fc-claim">Wells Fargo &mdash; eight products per household, and roughly 3.5 million fraudulent accounts</p>
+      <p class="fc-what">A clear, specific, measurable goal of exactly the kind goal-setting research says drives behaviour. It drove behaviour.</p>
+    </div>
+
+
+    <p>Wells Fargo's cross-selling target &mdash; eight financial products per household, promoted internally as the &ldquo;Gr-eight initiative&rdquo; &mdash; was a clear, specific, measurable goal of exactly the kind that goal-setting research says drives behaviour.</p>
+
+    <p>It drove behaviour. Employees opened accounts customers had not requested, forged signatures, and created fake email addresses to register customers for online services. Regulators fined the company $185 million; approximately 5,300 employees were dismissed; the figure of roughly 3.5 million potentially unauthorised accounts emerged from subsequent investigation. Internally, some sales goals were reportedly known as &ldquo;50/50 plans&rdquo; because leadership expected only about half of regions to meet them.</p>
+
+    <p>The underlying research had predicted this. Ord&oacute;&ntilde;ez, Schweitzer, Galinsky and Bazerman's 2009 paper &ldquo;Goals Gone Wild,&rdquo; published as a Harvard Business School working paper and in <em>Academy of Management Perspectives</em>, argued that the benefits of goal setting had been overstated and its systematic harms largely ignored &mdash; identifying narrowed focus that neglects non-goal areas, distorted risk preferences, increased unethical behaviour, inhibited learning, corroded organizational culture and reduced intrinsic motivation. Their recommendation was that goal setting be treated like a potent medication rather than an over-the-counter remedy.</p>
+
+    <p>This is the limit of the performance pillar, and it is the sharpest of the four. A well-designed metric does not merely measure the organization &mdash; it reshapes it. And the reshaping is indifferent to whether the resulting behaviour is what anyone intended.</p>
+
+    <h2>The Limit of Frameworks Themselves</h2>
+    <p>There is a final objection, and it applies to the 4P Framework as much as to any other.</p>
+
+    <p>Phil Rosenzweig's <em>The Halo Effect</em> (2007) makes the case that most management research suffers from a structural flaw: it selects companies on the basis of success, then works backwards to identify the attributes that produced it. But perceptions of those attributes are themselves contaminated by knowledge of the performance. When a company is winning, observers describe its culture as strong, its leadership as visionary, its processes as disciplined. When the same company falters, the same attributes get described as complacent, arrogant and bureaucratic &mdash; often with little having actually changed.</p>
+
+    <p>The empirical follow-up is unforgiving. Rosenzweig documents that of the 35 &ldquo;excellent&rdquo; companies profiled in Peters and Waterman's <em>In Search of Excellence</em>, 30 declined in profitability in the five years after the study period. Of the visionary companies in Collins and Porras's <em>Built to Last</em>, only a minority outperformed the S&amp;P 500 in the five years following the study; by profitability, more declined than improved.</p>
+
+    <p>These were the most influential management books of their generations, built on far larger datasets than most frameworks rest on. Their exemplars regressed toward the mean almost immediately.</p>
+
+    <h2>What This Means for the 4P Framework</h2>
+    <p>I am not withdrawing the framework. I am describing what it is.</p>
+
+    <p>The four pillars are a structured set of questions about how an organization is built. They direct attention to things that are genuinely consequential and genuinely under-examined. Used that way, they are useful.</p>
+
+    <p>What they are not is a formula. The cases above establish four specific cautions:</p>
+    <ul>
+      <li><strong>A stated purpose is not a functioning one</strong>, and may provide cover for its absence.</li>
+      <li><strong>Talented people do not help if the organization cannot hear them.</strong></li>
+      <li><strong>Process improves consistency</strong> &mdash; and therefore harms anything that depends on variance.</li>
+      <li><strong>A performance metric will reshape behaviour</strong> regardless of whether the resulting behaviour is desirable.</li>
+    </ul>
+
+    <p>There is also a fifth caution, which is about the framework's shape rather than its content. Four pillars is a memorable structure, and memorable structures are seductive in a way that should provoke suspicion. Reality is not organised into four parts because four is a satisfying number. Any model simple enough to be useful is simple enough to be wrong somewhere, and the places where it is wrong are exactly where a leadership team stops looking once they have adopted it.</p>
+
+    <p>The most honest claim I can make for the 4P Framework is this: it is a better set of questions than most organizations are currently asking. That is a genuinely useful thing, and a much smaller claim than frameworks usually make for themselves.</p>
+
+    <p>Treat anyone who offers you more than that &mdash; including me &mdash; with appropriate suspicion.</p>
+
+    <div class="series-index">
+      <h3>The Complete 4P Framework Series</h3>
+      <ol>
+        <li><a href="article-4p-framework-one-system.html">The 4 Ps of Leadership: Why They Can't Be Solved One at a Time</a></li>
+        <li><a href="article-purpose-must-cost-something.html">Purpose Only Counts When It Costs You Something</a></li>
+        <li><a href="article-people-hardest-to-fake.html">People: The Hardest P to Fake</a></li>
+        <li><a href="article-process-survives-your-absence.html">Process: What Survives Your Absence</a></li>
+        <li><a href="article-performance-readout-not-lever.html">Performance: The Readout, Not the Lever</a></li>
+        <li><a href="article-4p-diagnostic-sixteen-questions.html">The 4P Diagnostic: Sixteen Questions Worth Sitting With</a></li>
+        <li><span class="current">Where the 4P Framework Fails &mdash; you are here</span></li>
+      </ol>
+    </div>
+
+
+    <div class="article-sources">
+      <h3>Sources &amp; References</h3>
+      <ol>
+        <li>Enron Corporation, <em>Code of Ethics</em>, July 2000 (64 pages), including Kenneth Lay's foreword. Archived by the U.S. Department of Justice. <a href="https://www.justice.gov/archive/enron/exhibit/02-06/BBC-0001/ocr/EXH012-02970%5EFullText.TXT" target="_blank" rel="noopener">View the document &#8599;</a></li>
+        <li>Timo O. Vuori &amp; Quy N. Huy, &ldquo;Distributed Attention and Shared Emotions in the Innovation Process: How Nokia Lost the Smartphone Battle,&rdquo; <em>Administrative Science Quarterly</em>, Vol. 61, No. 1 (2016), pp. 9&ndash;51. <a href="https://journals.sagepub.com/doi/10.1177/0001839215606951" target="_blank" rel="noopener">Read the study &#8599;</a></li>
+        <li>Brian Hindo, &ldquo;At 3M, A Struggle Between Efficiency And Creativity,&rdquo; <em>BusinessWeek</em>, 11 June 2007. Operating margin and new-product revenue figures are as reported in that article.</li>
+        <li>Douglas C. Montgomery, &ldquo;Does Six Sigma stifle innovation?&rdquo;, <em>Quality and Reliability Engineering International</em>, 2008 &mdash; noting that R&amp;D funding was held flat over the same period, so causation is not established by the 3M case alone. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/qre.919" target="_blank" rel="noopener">Read the commentary &#8599;</a></li>
+        <li>Stanford Graduate School of Business / Harvard Law School Forum on Corporate Governance, &ldquo;The Wells Fargo Cross-Selling Scandal,&rdquo; 2019; U.S. Securities and Exchange Commission administrative proceedings, 2020. <a href="https://corpgov.law.harvard.edu/2019/02/06/the-wells-fargo-cross-selling-scandal-2/" target="_blank" rel="noopener">Read the case &#8599;</a></li>
+        <li>Lisa D. Ord&oacute;&ntilde;ez, Maurice E. Schweitzer, Adam D. Galinsky &amp; Max H. Bazerman, &ldquo;Goals Gone Wild: The Systematic Side Effects of Over-Prescribing Goal Setting,&rdquo; Harvard Business School Working Paper No. 09-083 (2009); also <em>Academy of Management Perspectives</em>, Vol. 23, No. 1. <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=35109" target="_blank" rel="noopener">View the paper &#8599;</a></li>
+        <li>Philip M. Rosenzweig, <em>The Halo Effect: &hellip; and the Eight Other Business Delusions That Deceive Managers</em> (Free Press, 2007); and &ldquo;Misunderstanding the Nature of Company Performance: The Halo Effect and Other Business Delusions,&rdquo; <em>California Management Review</em>, Vol. 49, No. 4 (2007).</li>
+      </ol>
+      <p class="src-note">All statistics are quoted as reported by the original sources. Where causation is disputed by credible analysts, that dispute is noted in the text rather than omitted.</p>
+    </div>
+
+    <div class="article-cta-box">
+      <p>Prefer a consultancy that tells you where its own model breaks down?</p>
+      <a href="contact.html" class="btn-primary" style="font-size:14px; padding:12px 26px;">Start a Conversation &#8594;</a>
+    </div>
+
+    <div class="series-nav">
+      <a href="article-4p-diagnostic-sixteen-questions.html">&#8592; Previous: The 4P Diagnostic</a>
+      <a href="article-4p-framework-one-system.html">Read the series from the start &#8594;</a>
+    </div>
+
+  </div>
+
+  <div class="article-share">
+    <div class="article-author-box">
+      <img src="../images/ganesh.jpg" alt="Ganesh Balasubramanian" />
+      <div>
+        <div style="font-weight:700; color:var(--earth-dark); font-size:15px;">Ganesh Balasubramanian</div>
+        <div style="font-size:13px; color:var(--text-light);">Founder &amp; CEO, SkillTrain</div>
+      </div>
+    </div>
+    <a href="contact.html" class="btn-teal" style="font-size:14px; padding:12px 24px;">Discuss This With Us &#8594;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-wrap">
+          <img class="mark" src="../images/logo-mark-colour.svg" alt="SkillTrain" />
+          <span class="wordmark">
+            <span class="wordmark-name">SkillTrain</span>
+            <span class="wordmark-tag">Purpose &middot; People &middot; Process &middot; Performance</span>
+          </span>
+        </div>
+        <p class="footer-desc">A global leadership development, executive coaching, and people development organization. Headquartered in India. Serving organizations worldwide.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="services.html#pipeline">PipelineForge™</a></li>
+          <li><a href="services.html#leadership">LeaderShift™</a></li>
+          <li><a href="services.html#coaching">CoachForward™</a></li>
+          <li><a href="services.html#manager">ManagerEdge™</a></li>
+          <li><a href="services.html#strategy">VisionCraft™</a></li>
+          <li><a href="services.html#keynote">SparkTalk™</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="impact.html">Social Impact</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links">
+          <li><a href="#" data-email-user="ganesh" data-email-domain="skilltrain.co.in" rel="nofollow">ganesh [at] skilltrain [dot] co [dot] in</a></li>
+          <li><a href="https://www.linkedin.com/in/bganesh/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/skilltrainindia" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 SkillTrain Training &amp; Consultancy India Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/bganesh/" target="_blank" class="social-icon">in</a>
+        <a href="https://www.youtube.com/skilltrainindia" target="_blank" class="social-icon">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
