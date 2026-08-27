@@ -25,8 +25,22 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(e.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+/* threshold must stay 0: for an element taller than ~10x the viewport (long
+   article bodies), 10% of its height exceeds the screen, so a 0.1 threshold
+   can never be met and the element stays stuck at opacity:0. */
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObserver.observe(el));
+
+/* Safety net: if anything prevents the observer from running (script error,
+   unsupported browser), reveal everything rather than hiding the page. */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('visible');
+    });
+  }, 400);
+});
 
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
